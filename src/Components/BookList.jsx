@@ -1,4 +1,4 @@
-import { getAllBooks, getBook } from "../auth/books";
+import { getAllBooks } from "../auth/books";
 import { useEffect, useState } from "react";
 import BookCard from "./bookCard";
 
