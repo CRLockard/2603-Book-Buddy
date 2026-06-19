@@ -12,7 +12,7 @@ function BookCard({ book }) {
       <img src={book.coverimage} alt={`The cover of ${book.title}`} />
       <h2>{book.title}</h2>
       <h3>{book.author}</h3>
-      <p className="BookDescription">{book.description}</p>
+      <p className="CardBookDescription">{book.description}</p>
       <button className="MoreInfo" onClick={handleDetails}>
         More Info
       </button>
