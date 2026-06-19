@@ -6,16 +6,26 @@
 }
 
 .BookCard {
-  border: 1px solid #ccc;
   padding: 1rem;
   background: #eee;
   border: 3px double black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.MoreInfo {
+  margin-top: auto;
 }
 
 .BookCard img {
   width: 100%;
   height: 250px;
   object-fit: cover;
+}
+
+.BookCard h2 {
+  min-height: 3rem;
 }
 
 .BookDescription {

@@ -1,6 +1,6 @@
 import { getAllBooks } from "../auth/books";
 import { useEffect, useState } from "react";
-import BookCard from "./bookCard";
+import BookCard from "./BookCard";
 
 function BookList() {
   const [allBooks, setAllBooks] = useState([]);
