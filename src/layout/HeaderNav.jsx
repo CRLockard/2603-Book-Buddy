@@ -1,10 +1,18 @@
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 import { useAuth } from "../auth/AuthContext";
 
 //change loutout later, should not link to new page
 //logout should call function to remove token
 function HeaderNav() {
-  const { logout } = useAuth();
+  const { logout, token } = useAuth();
+
+  const navigate = useNavigate();
+
+  function handleLogout() {
+    logout();
+    navigate("/");
+  }
+
   return (
     <header className="HeaderNav">
       <Link to="/books" className="HeaderLink">
@@ -17,10 +25,17 @@ function HeaderNav() {
       </Link>
 
       <nav>
-        <NavLink to="/account">My Books</NavLink>
-        <NavLink to="/login">Login</NavLink>
-        <NavLink to="/register">Register</NavLink>
-        <p onClick={logout}>Logout</p>
+        {token ? (
+          <>
+            <NavLink to="/account">My Books</NavLink>
+            <p onClick={handleLogout}>Logout</p>
+          </>
+        ) : (
+          <>
+            <NavLink to="/login">Login</NavLink>
+            <NavLink to="/register">Register</NavLink>
+          </>
+        )}
       </nav>
     </header>
   );
