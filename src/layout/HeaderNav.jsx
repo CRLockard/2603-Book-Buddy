@@ -4,11 +4,11 @@ import { Link, NavLink } from "react-router";
 //logout should call function to remove token
 function HeaderNav() {
   return (
-    <header>
-      <Link to="/books">
+    <header className="HeaderNav">
+      <Link to="/books" className="HeaderLink">
         <img
           className="HeaderLogo"
-          src="2603-Book-Buddy\public\books.png"
+          src="/books.png"
           alt="side view of 3 stacked books"
         ></img>
         <h1>Book Buddy</h1>

@@ -80,3 +80,51 @@ this allows me to then cap the description at 4 lines */
   background: rgb(136, 3, 3);
   color: antiquewhite;
 }
+
+.HeaderNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #eee;
+  border-bottom: 7px double black;
+}
+
+.HeaderLink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+.HeaderLogo {
+  width: 50px;
+  height: 50px;
+}
+
+.HeaderLink h1 {
+  margin: 0;
+}
+
+.HeaderNav nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.HeaderNav nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.HeaderNav nav a:hover {
+  text-decoration: underline;
+}
+
+.HeaderNav nav p {
+  margin: 0;
+  font-weight: bold;
+  cursor: pointer;
+}
