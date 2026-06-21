@@ -20,8 +20,8 @@ function BookDetails() {
   }, [id]);
 
   const navigate = useNavigate();
-  function handleGoBackToList() {
-    navigate(`/books`);
+  function handleGo() {
+    navigate(-1);
   }
 
   return (
@@ -35,7 +35,7 @@ function BookDetails() {
         <p className="BookDescription">{book.description}</p>
       </div>
       <div className="BookDetailsButtons">
-        <button onClick={handleGoBackToList}>Back To List</button>
+        <button onClick={handleGo}>Go back</button>
         {!book.available ? (
           <button className="Unavailable">Book Unavailable</button>
         ) : (
