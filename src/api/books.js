@@ -2,6 +2,7 @@ const API = "https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api";
 const bookEndpoint = "/books";
 const bookAPI = API + bookEndpoint;
 
+// this call should get the list of all books and their details
 export async function getAllBooks() {
   try {
     const response = await fetch(bookAPI);
@@ -14,6 +15,7 @@ export async function getAllBooks() {
   }
 }
 
+//This should get specific details of just one book.
 export async function getBook(id) {
   try {
     const response = await fetch(`${bookAPI}/${id}`);

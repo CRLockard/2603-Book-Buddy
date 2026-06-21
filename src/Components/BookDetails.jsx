@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router";
-import { getBook } from "../auth/books";
+import { getBook } from "../api/books";
 
+//This function creates a state for the selected book
+//it also uses the useparams function so that the id can get grabbed from the url
+//it then loads the book details and waits for an id change to reload
+//a handlefunction was added to help with going back to main list.
+//It also conditionally displays the reservation button based on book availability
 function BookDetails() {
   const [book, setBook] = useState({});
   const { id } = useParams();
