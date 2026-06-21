@@ -128,3 +128,133 @@ this allows me to then cap the description at 4 lines */
   font-weight: bold;
   cursor: pointer;
 }
+
+.Registration {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f5f5f5;
+}
+
+.RegistrationForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 2rem;
+  border: 4px double black;
+  border-radius: 12px;
+  background: white;
+
+  min-width: 320px;
+}
+
+.Registration h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Each label stacks text + input nicely */
+.RegistrationForm label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  gap: 0.3rem;
+}
+
+/* Inputs */
+.RegistrationForm input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Button */
+.RegistrationForm button {
+  padding: 0.6rem;
+  border: 2px solid black;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.RegistrationForm button:hover {
+  background: black;
+  color: white;
+}
+
+/* Link under form */
+.Registration a {
+  text-align: center;
+  margin-top: 1rem;
+  display: block;
+  color: black;
+}
+
+.LoginCard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f5f5f5;
+}
+
+.LoginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 2rem;
+  border: 4px double black;
+  border-radius: 12px;
+  background: white;
+
+  min-width: 320px;
+}
+
+.LoginCard h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Each label stacks text + input nicely */
+.LoginForm label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  gap: 0.3rem;
+}
+
+/* Inputs */
+.LoginForm input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Button */
+.LoginForm button {
+  padding: 0.6rem;
+  border: 2px solid black;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.LoginForm button:hover {
+  background: black;
+  color: white;
+}
+
+/* Link under form */
+.LoginCard a {
+  text-align: center;
+  margin-top: 1rem;
+  display: block;
+  color: black;
+}
