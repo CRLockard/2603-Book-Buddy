@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router";
 import { getBook } from "../api/books";
 import { useAuth } from "../auth/AuthContext";
+import { reserveBook } from "../api/reservations";
 
 //This function creates a state for the selected book
 //it also uses the useparams function so that the id can get grabbed from the url
@@ -27,6 +28,29 @@ function BookDetails() {
 
   const { token } = useAuth();
 
+  async function handleReservation() {
+    await reserveBook(token, book.id);
+    navigate("/account");
+  }
+
+  let button;
+
+  if (!book.available) {
+    button = <button className="Unavailable">Book Unavailable</button>;
+  } else if (!token) {
+    button = (
+      <button className="available" onClick={() => navigate("/login")}>
+        Login to Reserve
+      </button>
+    );
+  } else {
+    button = (
+      <button className="available" onClick={handleReservation}>
+        Reserve Book
+      </button>
+    );
+  }
+
   return (
     <section className="BookDetails">
       <div className="BookCoverImage">
@@ -39,12 +63,7 @@ function BookDetails() {
       </div>
       <div className="BookDetailsButtons">
         <button onClick={handleGo}>Go back</button>
-        {token &&
-          (!book.available ? (
-            <button className="Unavailable">Book Unavailable</button>
-          ) : (
-            <button className="available">Reserve Book</button>
-          ))}
+        {button}
       </div>
     </section>
   );

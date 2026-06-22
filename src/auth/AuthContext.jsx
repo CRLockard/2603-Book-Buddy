@@ -9,7 +9,11 @@ const LOGIN_API = BASE_API + LOGIN;
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
-  const [token, setToken] = useState(null);
+  function localTokenCheck() {
+    return localStorage.getItem("token");
+  }
+
+  const [token, setToken] = useState(localTokenCheck);
 
   const register = async (credentials) => {
     const response = await fetch(REGISTRATION_API, {

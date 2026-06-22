@@ -7,7 +7,6 @@ export async function getAllBooks() {
   try {
     const response = await fetch(bookAPI);
     const result = await response.json();
-    console.log("GetALlBooks API CALL", result);
     return result;
   } catch (error) {
     console.error("The getAllBooks API had and error", error);

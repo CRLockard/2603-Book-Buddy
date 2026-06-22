@@ -17,8 +17,6 @@ function BookList() {
     loadBooks();
   }, []);
 
-  console.log("allbooks", allBooks);
-
   return (
     <section className="BookList">
       {allBooks.map((book) => (
