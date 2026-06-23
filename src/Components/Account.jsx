@@ -21,6 +21,9 @@ function Account() {
     return <h3>Loading Account Details....</h3>;
   }
 
+  //i resue the bookcard file here
+  //When it is called from the account page I also pass a myReservation prop
+  //This is so that instead of a more info button I can have a return button appear
   return (
     <>
       <section className="UserDetails">

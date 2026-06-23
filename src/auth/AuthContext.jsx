@@ -29,6 +29,8 @@ export function AuthProvider({ children }) {
     localStorage.setItem("token", result.token);
   };
 
+  //this allows me to use toke, register, login and logout throughout my application
+  //This helps with displaying things contextually.
   const login = async (credentials) => {
     const response = await fetch(LOGIN_API, {
       method: "POST",

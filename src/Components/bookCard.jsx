@@ -17,6 +17,7 @@ function BookCard({ book, myReservation, token, returnedBookReload }) {
   }
   //function retruns a bookcard for use in booklist
   //This grabs the book information and displays them
+  //button is conditonal on where the function as been called from
   return (
     <article className="BookCard">
       <img src={book.coverimage} alt={`The cover of ${book.title}`} />

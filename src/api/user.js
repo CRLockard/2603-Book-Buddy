@@ -4,6 +4,7 @@ const RESERVATIONS = "/reservations";
 const ACCOUNT_API = API + USERS_ENDPOINT;
 const RESERVATIONS_API = API + RESERVATIONS;
 
+//takes a token and get the details of realted account
 export async function getAccountdetails(token) {
   try {
     const response = await fetch(ACCOUNT_API, {
@@ -19,6 +20,7 @@ export async function getAccountdetails(token) {
   }
 }
 
+//takes token and get associated reservations.
 export async function getUserReservations(token) {
   try {
     const response = await fetch(RESERVATIONS_API, {
